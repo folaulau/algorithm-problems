@@ -1,7 +1,9 @@
 package com.folatech.array.twonumbersum;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class TwoNumberSumMain {
@@ -20,6 +22,11 @@ public class TwoNumberSumMain {
      * { "array": [3, 5, -4, 8, 11, 1, -1, 6], "targetSum": 15 }<br>
      * { "array": [14], "targetSum": 15 }<br>
      * { "array": [15], "targetSum": 15 }<br>
+     */
+
+    /**
+     * Level of difficulty - Easy<br>
+     * Type - Array
      */
     public static void main(String[] args) {
         int[] numbers = {3, 5, -4, 8, 11, 1, -1, 6};
@@ -118,14 +125,16 @@ public class TwoNumberSumMain {
             return new int[0];
         }
 
-        Set<Integer> nums = new HashSet<>();
+        Map<Integer, Integer> nums = new HashMap<>();
 
         for (int num : array) {
+
             int match = targetSum - num;
-            if (nums.contains(match)) {
+
+            if (nums.containsKey(match)) {
                 return new int[]{match, num};
             } else {
-                nums.add(num);
+                nums.put(num, num);
             }
         }
 
