@@ -1,4 +1,4 @@
-package com.folatech.greedyprogrammingproblems;
+package com.folatech.greedyprogramming;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
