@@ -6,6 +6,15 @@ import java.util.Map;
 
 public class MinimumWaitingTimeMain {
 
+    /**
+     * Time Complexity: <br>
+     * Space Complexity: <br>
+     */
+
+    /**
+     * Difficulty level: easy <br>
+     */
+
     public static void main(String[] args) {
 
         int[] waitingTimes = {3, 2, 1, 2, 6};
