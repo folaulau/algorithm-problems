@@ -7,8 +7,8 @@ import java.util.Map;
 public class MinimumWaitingTimeMain {
 
     /**
-     * Time Complexity: <br>
-     * Space Complexity: <br>
+     * Time Complexity: O(n log n) <br>
+     * Space Complexity: O(1)<br>
      */
 
     /**
