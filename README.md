@@ -1,4 +1,4 @@
-# algorithm-problems
+# This repo contains Programming Problems
 
 ## Problems I have solved
 1. Valid Parenthesis Balance - Stack
