@@ -1,4 +1,4 @@
-# This repo contains programming problems as for programming interviews
+# This repo contains Programming Problems
 
 ## Problems I have solved
 1. Valid Parenthesis Balance - Stack
