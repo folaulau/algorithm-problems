@@ -2,5 +2,5 @@
 
 ## Problems I have solved
 1. Valid Parenthesis Balance - Stack
-2. 2 number sum - Array
-3. 3 number sum - Array
+2. [2 number sum - Array](https://github.com/folaulau/algorithm-problems/tree/main/array-problems/src/main/java/com/folatech/array/twonumbersum)
+3. [3 number sum - Array](https://github.com/folaulau/algorithm-problems/tree/main/array-problems/src/main/java/com/folatech/array/threenumbersum)
