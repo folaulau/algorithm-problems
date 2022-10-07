@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -18,7 +19,7 @@ public class MostFrequentDataType {
 
 	public static void main(String[] args) {
 		List<Object> lists = List.of("ac", "Laulau", true, 2, 3.4, 'd', 5, 9.23, List.of(1, 8),
-				Map.of("name", "folau", "age", 35, "numbers", List.of(10, 18)));
+				Map.of("name", "folau", "age", 35, "numbers", List.of(10, 18)), Set.of(34, 3.5));
 
 		System.out.println("lists: " + lists);
 		System.out.println("mostFrequentDataType: " + getMostFrequentDataType(lists) + "\n");
@@ -56,6 +57,17 @@ public class MostFrequentDataType {
 
 				// call getDataTypeCounts again
 				Map<String, Integer> dict1 = getDataTypeCounts((List) obj);
+
+				dict = Stream.of(dict, dict1).flatMap(map -> map.entrySet().stream())
+						.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (value1, value2) -> {
+							System.out.println("value1: " + value1 + ", value2: " + value2);
+							return value1 + value2;
+						}));
+
+				continue;
+			} else if (typeName.startsWith("java.util.ImmutableCollections$Set")) {
+				// call getDataTypeCounts again
+				Map<String, Integer> dict1 = getDataTypeCounts(new ArrayList<>((Set) obj));
 
 				dict = Stream.of(dict, dict1).flatMap(map -> map.entrySet().stream())
 						.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (value1, value2) -> {
