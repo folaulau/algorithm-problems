@@ -1,4 +1,4 @@
-package com.folatech.dynamicprogramming;
+package com.folatech.dynamicprogramming.maxsubset;
 
 import java.util.Arrays;
 
