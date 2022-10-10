@@ -45,6 +45,16 @@ public class MaxSubsetSumNoAdjentMain {
 
 	}
 
+	/**
+	 * Solution
+	 * 
+	 * 
+	 * 
+	 * O(n) time -  n is the length of the input array
+	 * 
+	 * O(1) space
+	 * 
+	 */
 	static int maxSubsetSumNoAdjacent(int[] array) {
 
 		System.out.println("array: " + Arrays.toString(array));
