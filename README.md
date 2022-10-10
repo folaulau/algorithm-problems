@@ -9,3 +9,4 @@
 6. [Get most frequent letter - Map](https://github.com/folaulau/algorithm-problems/blob/main/dictionary-problems/src/main/java/com/folatech/dictionary/mostfrequent/MostFrequentLetter.java)
 7. [Get most frequent data type - Map](https://github.com/folaulau/algorithm-problems/blob/main/dictionary-problems/src/main/java/com/folatech/dictionary/mostfrequent/MostFrequentDataType.java)
 8. [Product sum - Recursion](https://github.com/folaulau/algorithm-problems/tree/main/recursion-problems/src/main/java/com/folatech/recursion/productsum)
+9. [MaxSubsetSum - Dynamic Programming](https://github.com/folaulau/algorithm-problems/blob/main/dynamic-programming-problems/src/main/java/com/folatech/dynamicprogramming/maxsubset/MaxSubsetSumNoAdjentMain.java)
