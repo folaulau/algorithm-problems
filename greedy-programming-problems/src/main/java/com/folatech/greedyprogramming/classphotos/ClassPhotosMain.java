@@ -6,77 +6,79 @@ import java.util.List;
 
 public class ClassPhotosMain {
 
-    /**
-     * Greedy Algorithm
-     */
+	/**
+	 * Greedy Algorithm
+	 */
 
-    /**
-     * Difficulty level: easy
-     */
-    
-    /**
-     * Time Complexity: O(n log n)
-     * Space Complexity: O(1)
-     */
+	/**
+	 * Difficulty level: easy
+	 */
 
-    public static void main(String[] args) {
+	/**
+	 * Time Complexity: O(n log n) Space Complexity: O(1)
+	 * 
+	 * <br>
+	 * https://www.algoexpert.io/questions/max-subset-sum-no-adjacent
+	 */
 
-        List<Integer> redShirtHeights = Arrays.asList(5, 8, 1, 3, 4);
-        List<Integer> blueShirtHeights = Arrays.asList(6, 9, 2, 4, 5);
+	public static void main(String[] args) {
 
-        canTakeClassPhotos(redShirtHeights, blueShirtHeights);// true
+		List<Integer> redShirtHeights = Arrays.asList(5, 8, 1, 3, 4);
+		List<Integer> blueShirtHeights = Arrays.asList(6, 9, 2, 4, 5);
 
-        redShirtHeights = Arrays.asList(6, 9, 2, 4, 5);
-        blueShirtHeights = Arrays.asList(5, 8, 1, 3, 4);
+		canTakeClassPhotos(redShirtHeights, blueShirtHeights);// true
 
-        canTakeClassPhotos(redShirtHeights, blueShirtHeights);// true
+		redShirtHeights = Arrays.asList(6, 9, 2, 4, 5);
+		blueShirtHeights = Arrays.asList(5, 8, 1, 3, 4);
 
-        redShirtHeights = Arrays.asList(6, 9, 2, 4, 5, 1);
-        blueShirtHeights = Arrays.asList(5, 8, 1, 3, 4, 9);
+		canTakeClassPhotos(redShirtHeights, blueShirtHeights);// true
 
-        canTakeClassPhotos(redShirtHeights, blueShirtHeights);// false
+		redShirtHeights = Arrays.asList(6, 9, 2, 4, 5, 1);
+		blueShirtHeights = Arrays.asList(5, 8, 1, 3, 4, 9);
 
-        redShirtHeights = Arrays.asList(6);
-        blueShirtHeights = Arrays.asList(6);
+		canTakeClassPhotos(redShirtHeights, blueShirtHeights);// false
 
-        canTakeClassPhotos(redShirtHeights, blueShirtHeights);// false
+		redShirtHeights = Arrays.asList(6);
+		blueShirtHeights = Arrays.asList(6);
 
-    }
+		canTakeClassPhotos(redShirtHeights, blueShirtHeights);// false
 
-    static boolean canTakeClassPhotos(List<Integer> redShirtHeights, List<Integer> blueShirtHeights) {
-        Collections.sort(redShirtHeights, Collections.reverseOrder());
-        Collections.sort(blueShirtHeights, Collections.reverseOrder());
+	}
 
-        System.out.println("redShirtHeights: " + redShirtHeights);
-        System.out.println("blueShirtHeights: " + blueShirtHeights);
+	static boolean canTakeClassPhotos(List<Integer> redShirtHeights, List<Integer> blueShirtHeights) {
+		Collections.sort(redShirtHeights, Collections.reverseOrder());
+		Collections.sort(blueShirtHeights, Collections.reverseOrder());
 
-        boolean canTakePhoto = true;
+		System.out.println("redShirtHeights: " + redShirtHeights);
+		System.out.println("blueShirtHeights: " + blueShirtHeights);
 
-        String frontRowColor = (redShirtHeights.get(0) < blueShirtHeights.get(0)) ? "RED" : "BLUE";
+		boolean canTakePhoto = true;
 
-        System.out.println("frontRowColor: " + frontRowColor);
+		String frontRowColor = (redShirtHeights.get(0) < blueShirtHeights.get(0)) ? "RED" : "BLUE";
 
-        for (int i = 0; i < redShirtHeights.size(); i++) {
-            int redShirtHeight = redShirtHeights.get(i);// front row
-            int blueShirtHeight = blueShirtHeights.get(i);// back row
+		System.out.println("frontRowColor: " + frontRowColor);
 
-            if (frontRowColor.equals("RED")) {
+		for (int i = 0; i < redShirtHeights.size(); i++) {
+			int redShirtHeight = redShirtHeights.get(i);// front row
+			int blueShirtHeight = blueShirtHeights.get(i);// back row
 
-                if (redShirtHeight >= blueShirtHeight) {
-                    canTakePhoto = false;
-                    break;
-                }
+			if (frontRowColor.equals("RED")) {
 
-            } else if (frontRowColor.equals("BLUE")) {
-                if (redShirtHeight <= blueShirtHeight) {
-                    canTakePhoto = false;
-                    break;
-                }
-            }
-        }
+				if (redShirtHeight >= blueShirtHeight) {
+					canTakePhoto = false;
+					break;
+				}
 
-        System.out.println("canTakePhoto: " + canTakePhoto + "\n\n");
+			} else if (frontRowColor.equals("BLUE")) {
+				if (redShirtHeight <= blueShirtHeight) {
+					canTakePhoto = false;
+					break;
+				}
+			}
+		}
 
-        return canTakePhoto;
-    }
+		System.out.println("canTakePhoto: " + canTakePhoto + "\n\n");
+
+		return canTakePhoto;
+	}
 }
