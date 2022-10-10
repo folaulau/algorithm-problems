@@ -18,7 +18,6 @@ public class ClassPhotosMain {
 	 * Time Complexity: O(n log n) Space Complexity: O(1)
 	 * 
 	 * <br>
-	 * https://www.algoexpert.io/questions/max-subset-sum-no-adjacent
 	 */
 
 	public static void main(String[] args) {
