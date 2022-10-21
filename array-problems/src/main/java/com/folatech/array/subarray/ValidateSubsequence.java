@@ -219,6 +219,10 @@ public class ValidateSubsequence {
 
 		int strSize = str.length();
 		int seqSize = sequence.length();
+		
+		if(strSize > 0 && seqSize==0) {
+			return true;
+		}
 
 		for (int i = 0; i < strSize; i++) {
 
