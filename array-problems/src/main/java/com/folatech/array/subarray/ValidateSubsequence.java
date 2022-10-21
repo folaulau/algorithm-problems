@@ -52,6 +52,21 @@ public class ValidateSubsequence {
 		System.out.println("sequence2: " + sequence2);
 		result = isValidSubsequences(list, sequence1, sequence2);
 		System.out.println("result: " + result + "\n");
+
+		String str = "folaukaveinga";
+		String seq = "okg";
+		System.out.println("str: " + str);
+		System.out.println("seq: " + seq);
+		result = isValidStrSubsequence(str, seq);
+		System.out.println("result: " + result + "\n");
+
+		str = "folaukaveinga";
+		seq = "okgk";
+		System.out.println("str: " + str);
+		System.out.println("seq: " + seq);
+		result = isValidStrSubsequence(str, seq);
+		System.out.println("result: " + result + "\n");
+
 	}
 
 	/**
@@ -196,5 +211,30 @@ public class ValidateSubsequence {
 		 * if loop through til ends of sequence then it's true else false
 		 */
 		return (seq1Size == seq1Index && seq2Size == seq2Index);
+	}
+
+	static boolean isValidStrSubsequence(String str, String sequence) {
+
+		int seqIndex = 0;
+
+		int strSize = str.length();
+		int seqSize = sequence.length();
+
+		for (int i = 0; i < strSize; i++) {
+
+			System.out.println("str i: " + str.charAt(i));
+			System.out.println("sequence i: " + sequence.charAt(seqIndex));
+
+			if (str.charAt(i) == sequence.charAt(seqIndex)) {
+				seqIndex += 1;
+			}
+
+			if (seqIndex == seqSize) {
+				break;
+			}
+
+		}
+
+		return (seqSize == seqIndex);
 	}
 }
