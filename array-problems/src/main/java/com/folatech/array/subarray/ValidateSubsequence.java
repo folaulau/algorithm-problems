@@ -213,14 +213,19 @@ public class ValidateSubsequence {
 		return (seq1Size == seq1Index && seq2Size == seq2Index);
 	}
 
+	/**
+	 * Reference: https://leetcode.com/problems/is-subsequence/submissions/
+	 * 
+	 * 
+	 */
 	static boolean isValidStrSubsequence(String str, String sequence) {
 
 		int seqIndex = 0;
 
 		int strSize = str.length();
 		int seqSize = sequence.length();
-		
-		if(strSize > 0 && seqSize==0) {
+
+		if (strSize > 0 && seqSize == 0) {
 			return true;
 		}
 
