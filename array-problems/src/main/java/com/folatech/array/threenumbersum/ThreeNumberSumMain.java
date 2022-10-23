@@ -58,7 +58,6 @@ public class ThreeNumberSumMain {
 		List<Integer[]> operands = threeNumberSum(numbers, targetTotal);
 		System.out.println("numbers: " + Arrays.toString(numbers));
 		System.out.println("targetTotal: " + targetTotal);
-		System.out.println("operands: " + operands.toString());
 
 		operands.stream().forEach(array -> {
 			System.out.println("array: " + Arrays.toString(array));
