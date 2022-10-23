@@ -55,9 +55,11 @@ public class ThreeNumberSumMain {
 		int[] numbers = { 12, 3, 1, 2, -6, 5, -8, 6 };
 		int targetTotal = 0;
 
+		System.out.println("numbers: " + Arrays.toString(numbers) + ", targetTotal: " + targetTotal);
+
 		List<Integer[]> operands = threeNumberSum(numbers, targetTotal);
-		System.out.println("numbers: " + Arrays.toString(numbers));
-		System.out.println("targetTotal: " + targetTotal);
+
+		System.out.println("Three Number Sum");
 
 		operands.stream().forEach(array -> {
 			System.out.println("array: " + Arrays.toString(array));
@@ -86,6 +88,9 @@ public class ThreeNumberSumMain {
 
 			while (left < right) {
 				int sum = array[x] + array[left] + array[right];
+
+				System.out.println(
+						"sum: " + sum + ", x: " + array[x] + ", left: " + array[left] + ", right: " + array[right]);
 
 				if (sum == targetSum) {
 					Integer[] triplet = { array[x], array[left], array[right] };
