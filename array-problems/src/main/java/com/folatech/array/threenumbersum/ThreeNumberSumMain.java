@@ -53,13 +53,13 @@ public class ThreeNumberSumMain {
 	 */
 	public static void main(String[] args) {
 		int[] numbers = { 12, 3, 1, 2, -6, 5, -8, 6 };
-		int targetTotal = 0;
+		int targetSum = 0;
 
-		System.out.println("numbers: " + Arrays.toString(numbers) + ", targetTotal: " + targetTotal);
+		System.out.println("numbers: " + Arrays.toString(numbers) + ", targetSum: " + targetSum);
 
-		List<Integer[]> operands = threeNumberSum(numbers, targetTotal);
+		List<Integer[]> operands = threeNumberSum(numbers, targetSum);
 
-		System.out.println("Three Number Sum");
+		System.out.println("\nThree Number Sum");
 
 		operands.stream().forEach(array -> {
 			System.out.println("array: " + Arrays.toString(array));
@@ -70,6 +70,23 @@ public class ThreeNumberSumMain {
 	/**
 	 * Time O(n^2)<br>
 	 * Space O(n)
+	 * 
+	 * Solution
+	 * 
+	 * - sort array
+	 * 
+	 * - loop through array
+	 * 
+	 * - create 2 pointers that move from ends to middle
+	 * 
+	 * - add the current number, x, left and right
+	 * 
+	 * - if sum is equal that save that combo, and move pointers from both sides to
+	 * the middle
+	 * 
+	 * - if sum < targetSum, move left pointer to the right
+	 * 
+	 * - if sum > targetSum, move right pointer to the left
 	 */
 	private static List<Integer[]> threeNumberSum(int[] array, int targetSum) {
 		int size = array.length;
@@ -82,15 +99,19 @@ public class ThreeNumberSumMain {
 
 		Arrays.sort(array);
 
+		System.out.println("sorted array: " + Arrays.toString(array));
+
 		for (int x = 0; x < size - 2; x++) {
 			int left = x + 1;
 			int right = size - 1;
 
 			while (left < right) {
+//				System.out.println("x: " + x + ", left: " + left + ", right: " + right);
+
 				int sum = array[x] + array[left] + array[right];
 
-				System.out.println(
-						"sum: " + sum + ", x: " + array[x] + ", left: " + array[left] + ", right: " + array[right]);
+				System.out.println("targetSum: " + targetSum + ", sum: " + sum + ", x: " + array[x] + ", left: "
+						+ array[left] + ", right: " + array[right]);
 
 				if (sum == targetSum) {
 					Integer[] triplet = { array[x], array[left], array[right] };
@@ -103,9 +124,13 @@ public class ThreeNumberSumMain {
 
 					left++;
 
+					System.out.println("move right from left");
+
 				} else if (sum > targetSum) {
 
 					right--;
+
+					System.out.println("move left from right");
 
 				}
 			}
