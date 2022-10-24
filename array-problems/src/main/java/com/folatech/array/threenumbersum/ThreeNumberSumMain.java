@@ -124,13 +124,13 @@ public class ThreeNumberSumMain {
 
 					left++;
 
-					System.out.println("move right from left");
+					System.out.println("move right pointer to left");
 
 				} else if (sum > targetSum) {
 
 					right--;
 
-					System.out.println("move left from right");
+					System.out.println("move left pointer to right");
 
 				}
 			}
