@@ -80,7 +80,9 @@ public class Tournament {
 		if (scoreBoard.isEmpty()) {
 			return "";
 		}
-
+		
+		
+		// find the competitor with the highest score
 		Map.Entry<String, Integer> winnerEntry = null;
 
 		for (Map.Entry<String, Integer> competitor : scoreBoard.entrySet()) {
