@@ -12,3 +12,4 @@
 9. [MaxSubsetSum - Dynamic Programming](https://github.com/folaulau/algorithm-problems/blob/main/dynamic-programming-problems/src/main/java/com/folatech/dynamicprogramming/maxsubset/MaxSubsetSumNoAdjentMain.java)
 10. [Get duplicates - Array](https://github.com/folaulau/algorithm-problems/tree/main/array-problems/src/main/java/com/folatech/array/duplicate)
 11. [Subsequence of another array - Array](https://github.com/folaulau/algorithm-problems/tree/main/array-problems/src/main/java/com/folatech/array/subarray)
+12 [Tournament - Array](https://github.com/folaulau/algorithm-problems/tree/main/array-problems/src/main/java/com/folatech/array/tournament)
