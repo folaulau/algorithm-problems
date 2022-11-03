@@ -13,3 +13,4 @@
 10. [Get duplicates - Array](https://github.com/folaulau/algorithm-problems/tree/main/array-problems/src/main/java/com/folatech/array/duplicate)
 11. [Subsequence of another array - Array](https://github.com/folaulau/algorithm-problems/tree/main/array-problems/src/main/java/com/folatech/array/subarray)
 12. [Tournament - Array](https://github.com/folaulau/algorithm-problems/tree/main/array-problems/src/main/java/com/folatech/array/tournament)
+13. [Remove duplicates from sorted linkedlist - LinkedList](https://github.com/folaulau/algorithm-problems/tree/main/linkedlist-problems/src/main/java/com/folatech/linkedlist/removeduplicates)
