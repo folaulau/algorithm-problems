@@ -1,7 +1,9 @@
 package com.folatech.stack.balanced_brackets;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.Stack;
 
 /**
@@ -20,7 +22,7 @@ public class ValidParentheses {
 	public static void main(String[] args) {
 
 		List<String> strs = Arrays.asList("{{}}()[()]", "(][)", ")", "([])(){}(())()()", "()[]{}{",
-				"(((((({{{{{[[[[[([)])]]]]]}}}}}))))))", "");
+				"(((((({{{{{[[[[[([)])]]]]]}}}}}))))))", "(a)");
 
 		for (String str : strs) {
 			boolean valid = containValidParentheses(str);
@@ -51,6 +53,14 @@ public class ValidParentheses {
 	 *
 	 */
 	public static boolean containValidParentheses(String str) {
+		
+		Set<Character> validCharacters = new HashSet<>();
+		validCharacters.add('(');
+		validCharacters.add(')');
+		validCharacters.add('{');
+		validCharacters.add('}');
+		validCharacters.add('[');
+		validCharacters.add(']');
 
 		/**
 		 * Use stack so you can easily check the top for the corresponding open
@@ -59,6 +69,10 @@ public class ValidParentheses {
 		Stack<Character> stack = new Stack<>();
 
 		for (char ch : str.toCharArray()) {
+			
+			if(!validCharacters.contains(ch)) {
+				continue;
+			}
 
 			/**
 			 * look for closing, and add all open characters to your stack
@@ -71,7 +85,7 @@ public class ValidParentheses {
 				 * no opening character to match with closing
 				 */
 				if (stack.isEmpty()) {
-					return false;
+					break;
 				}
 
 				/**
@@ -90,6 +104,8 @@ public class ValidParentheses {
 
 			}
 		}
+		
+		System.out.println("stack: "+stack);
 
 		/**
 		 * if stack is not empty, which means there might be some open characters
