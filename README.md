@@ -15,3 +15,4 @@
 12. [Tournament - Array](https://github.com/folaulau/algorithm-problems/tree/main/array-problems/src/main/java/com/folatech/array/tournament)
 13. [Remove duplicates from sorted linkedlist - LinkedList](https://github.com/folaulau/algorithm-problems/tree/main/linkedlist-problems/src/main/java/com/folatech/linkedlist/removeduplicates)
 14. [Available Time Slots - Array](https://github.com/folaulau/algorithm-problems/tree/main/array-problems/src/main/java/com/folatech/array/availablebookingtimes)
+15. [Sunset View - Stack](https://github.com/folaulau/algorithm-problems/tree/main/stack-problems/src/main/java/com/folatech/stack/sunset_views)
