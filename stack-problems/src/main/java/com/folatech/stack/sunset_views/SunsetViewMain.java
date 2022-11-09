@@ -47,20 +47,22 @@ public class SunsetViewMain {
 
 		System.out.println("buildings: " + Arrays.toString(buildings) + ", direction: " + direction);
 
-//		List<Integer> tallBuildings = getSunsetViewsWithList(buildings, direction);
-//
-//		System.out.println("tallBuildings: " + tallBuildings);
-//
-//		buildings = new int[] { 3, 5, 4, 4, 3, 1, 3, 2 };
-//		direction = "WEST";
-//
-//		System.out.println("buildings: " + Arrays.toString(buildings) + ", direction: " + direction);
-//
-//		tallBuildings = getSunsetViewsWithList(buildings, direction);
-//
-//		System.out.println("tallBuildings: " + tallBuildings);
+		List<Integer> tallBuildings = getSunsetViewsWithList(buildings, direction);
 
-		List<Integer> tallBuildings = getSunsetViewsWithStack(buildings, direction);
+		System.out.println("tallBuildings: " + tallBuildings);
+
+		buildings = new int[] { 3, 5, 4, 4, 3, 1, 3, 2 };
+		direction = "WEST";
+
+		System.out.println("buildings: " + Arrays.toString(buildings) + ", direction: " + direction);
+
+		tallBuildings = getSunsetViewsWithList(buildings, direction);
+
+		System.out.println("tallBuildings: " + tallBuildings);
+
+		// ------------------------- using stack ----------------------
+
+		tallBuildings = getSunsetViewsWithStack(buildings, direction);
 
 		System.out.println("tallBuildings: " + tallBuildings);
 
