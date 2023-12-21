@@ -54,13 +54,13 @@ public class ValidParentheses {
 	 */
 	public static boolean containValidParentheses(String str) {
 		
-		Set<Character> validCharacters = new HashSet<>();
-		validCharacters.add('(');
-		validCharacters.add(')');
-		validCharacters.add('{');
-		validCharacters.add('}');
-		validCharacters.add('[');
-		validCharacters.add(']');
+//		Set<Character> validCharacters = new HashSet<>();
+//		validCharacters.add('(');
+//		validCharacters.add(')');
+//		validCharacters.add('{');
+//		validCharacters.add('}');
+//		validCharacters.add('[');
+//		validCharacters.add(']');
 
 		/**
 		 * Use stack so you can easily check the top for the corresponding open
@@ -70,9 +70,9 @@ public class ValidParentheses {
 
 		for (char ch : str.toCharArray()) {
 			
-			if(!validCharacters.contains(ch)) {
-				continue;
-			}
+//			if(!validCharacters.contains(ch)) {
+//				continue;
+//			}
 
 			/**
 			 * look for closing, and add all open characters to your stack
@@ -105,7 +105,7 @@ public class ValidParentheses {
 			}
 		}
 		
-		System.out.println("stack: "+stack);
+//		System.out.println("stack: "+stack);
 
 		/**
 		 * if stack is not empty, which means there might be some open characters

@@ -10,7 +10,7 @@ class RepeatedLetter {
 
         for (String phrase : phrases) {
             System.out.println("Phrase: " + phrase);
-            String letter = searchForMostRepeatedLetters(phrase);
+            String letter = searchForMostRepeatedLetter(phrase);
             System.out.println("First word with the most repeated letter: " + letter);
             System.out.println("");
         }
@@ -29,7 +29,7 @@ class RepeatedLetter {
      * <p>
      * Examples Input: "Hello apple pie" -> Output: Hello Input:"No words" -> Output: -1
      */
-    public static String searchForMostRepeatedLetters(String str) {
+    public static String searchForMostRepeatedLetter(String str) {
         String[] words = str.split(" ");
         int maxRepeats = 0;
         String resultWord = "-1";
