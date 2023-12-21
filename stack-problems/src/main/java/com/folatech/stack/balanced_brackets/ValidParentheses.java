@@ -112,11 +112,8 @@ public class ValidParentheses {
 		 * without corresponding closing characters so you have an invalid pair of
 		 * parentheses and so return false
 		 */
-		if (!stack.isEmpty()) {
-			return false;
-		}
 
-		return true;
+		return stack.isEmpty();
 	}
 
 }
