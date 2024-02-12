@@ -48,7 +48,7 @@ public class StringCompression {
         resultStack.push(new StringBuilder());
 
         int index = 0;
-
+        
         while (index < compressed.length()) {
             char current = compressed.charAt(index);
 
