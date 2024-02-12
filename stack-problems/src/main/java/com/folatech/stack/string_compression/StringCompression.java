@@ -44,6 +44,7 @@ public class StringCompression {
     public static String decompress(String compressed) {
 
         Stack<Integer> counts = new Stack<>();
+        
         Stack<StringBuilder> resultStack = new Stack<>();
         resultStack.push(new StringBuilder());
 
