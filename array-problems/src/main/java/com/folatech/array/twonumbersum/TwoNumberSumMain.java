@@ -133,9 +133,9 @@ public class TwoNumberSumMain {
 
             if (nums.containsKey(match)) {
                 return new int[]{match, num};
-            } else {
-                nums.put(num, num);
-            }
+            } 
+            
+            nums.put(num, num);
         }
 
         return new int[0];

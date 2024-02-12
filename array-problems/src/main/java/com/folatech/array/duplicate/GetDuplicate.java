@@ -93,6 +93,7 @@ public class GetDuplicate {
 			return Arrays.asList();
 		}
 
+		// Here's stream way of doing the above task.
 //		Arrays.asList(numbers)
 //		
 //		.stream()
