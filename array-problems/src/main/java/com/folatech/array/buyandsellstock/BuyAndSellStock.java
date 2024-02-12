@@ -42,6 +42,11 @@ public class BuyAndSellStock {
 		int mProfit = maxProfit(prices);
 
 		System.out.println("mProfit: " + mProfit);
+		
+        System.out.println("maxProfitDay: " + maxProfitDay((prices)));
+
+        int[] buySellDays = maxProfitDays(prices);
+        System.out.println("buy: " + buySellDays[0]+", sell: "+buySellDays[1]);
 	}
 
 	public static int maxProfit(int[] prices) {
@@ -71,5 +76,59 @@ public class BuyAndSellStock {
 		}
 		return profit;
 	}
+	
+    public static int maxProfitDay(int[] prices){
+
+        // keep track of the smallest number.
+
+        int min = prices[0];
+        int profit = 0;
+        int maxProDay = 0;
+
+        for(int i = 0; i < prices.length; i++) {
+
+            if(min > prices[i]){
+                min = prices[i];
+            }else{
+                int currentProfit = prices[i] - min;
+
+                if(currentProfit > profit){
+                    profit = currentProfit;
+                    maxProDay = i;
+                }
+            }
+        }
+
+        return maxProDay;
+
+    }
+
+    public static int[] maxProfitDays(int[] prices){
+
+        // keep track of the smallest number.
+
+        int min = prices[0];
+        int profit = 0;
+        int minProDay = 0;
+        int maxProDay = 0;
+
+        for(int i = 0; i < prices.length; i++) {
+
+            if(min > prices[i]){
+                min = prices[i];
+                minProDay = i;
+            }else{
+                int currentProfit = prices[i] - min;
+
+                if(currentProfit > profit){
+                    profit = currentProfit;
+                    maxProDay = i;
+                }
+            }
+        }
+
+        return new int[]{minProDay, maxProDay};
+
+    }
 
 }
