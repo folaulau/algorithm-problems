@@ -56,6 +56,8 @@ public class BuyAndSellStock {
 		int profit = 0, min = prices[0];
 
 		/**
+		 * keep track of the min.
+		 * 
 		 * loop through prices
 		 */
 		for (int i = 1; i < prices.length; i++) {
